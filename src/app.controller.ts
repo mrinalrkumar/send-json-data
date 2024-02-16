@@ -19,4 +19,14 @@ export class AppController {
   getLeadSummary(): any {
     return this.appService.getLeadSummary();
   }
+
+  @Get('fileSummary')
+  getFileSummary(): any {
+    return this.appService.getFileSummary();
+  }
+
+  @Get('disbSummary')
+  getDisbSummary(): any {
+    return this.appService.getDisbSummary();
+  }
 }
