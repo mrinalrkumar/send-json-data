@@ -45,4 +45,39 @@ export class AppService {
       }
     ]
   }
+
+  getFileSummary(): any {
+    return [
+      {
+        "id": 1,
+        "fileId": "ASDA11231ADS",
+        "fileNo": "1231231",
+        "fileName": "John",
+        "employmentType": "Self employed",
+        "statusDesc": "DDEP",
+        "product": "home loan",
+        "openQueries": "0",
+        "property": "Y",
+        "loanAmount": "1000000"
+      }
+    ]
+  }
+
+  getDisbSummary(): any {
+    return [
+      {
+        "id": 1,
+        "disbNo": "ASDA1231A",
+        "disbName": "John",
+        "employmentType": "Self employed",
+        "statusDesc": "SN/SANC",
+        "fileNo": "20241231",
+        "product": "Home loan",
+        "openQueries": "0",
+        "property": "Y",
+        "disbAmt": "10000",
+        "loanAmount": "10000000"
+      }
+    ]
+  }
 }
