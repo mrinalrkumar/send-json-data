@@ -17,4 +17,23 @@ export class AppService {
       { "id": 10, "text": "SANCTION", "value": 0 }
     ]
   }
+
+  getLeadSummary(): any {
+    return [
+      {
+        "id": 1,
+        "leadNo": "ASDA1231A",
+        "leadName": "John",
+        "employmentType": "Self employed",
+        "statusDesc": "New",
+        "leadDate": "2024-12-12",
+        "leadPhone": "9876543210",
+        "leadProductType": "Home loan",
+        "lmsCalling": "No",
+        "sourceType": "Bank",
+        "applicationStatus": "Online",
+        "meetingDate": "2024-12-12"
+      }
+    ]
+  }
 }
