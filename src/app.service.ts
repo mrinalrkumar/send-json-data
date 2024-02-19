@@ -41,7 +41,8 @@ export class AppService {
         "lmsCalling": "No",
         "sourceType": "Bank",
         "applicationStatus": "Online",
-        "meetingDate": "2024-12-12"
+        "meetingDate": "2024-12-12",
+        "timestamp": ""
       },
       {
         "id": 2,
@@ -55,7 +56,8 @@ export class AppService {
         "lmsCalling": "Yes",
         "sourceType": "Online",
         "applicationStatus": "Pending",
-        "meetingDate": "2024-11-30"
+        "meetingDate": "2024-11-30",
+        "timestamp": ""
       },
       {
         "id": 3,
@@ -69,7 +71,8 @@ export class AppService {
         "lmsCalling": "No",
         "sourceType": "Referral",
         "applicationStatus": "Approved",
-        "meetingDate": "2024-10-20"
+        "meetingDate": "2024-10-20",
+        "timestamp": ""
       },
       {
         "id": 4,
@@ -83,7 +86,8 @@ export class AppService {
         "lmsCalling": "Yes",
         "sourceType": "Agent",
         "applicationStatus": "Rejected",
-        "meetingDate": "2024-09-10"
+        "meetingDate": "2024-09-10",
+        "timestamp": ""
       },
       {
         "id": 5,
@@ -97,7 +101,8 @@ export class AppService {
         "lmsCalling": "No",
         "sourceType": "Bank",
         "applicationStatus": "Pending",
-        "meetingDate": "2024-08-25"
+        "meetingDate": "2024-08-25",
+        "timestamp": ""
       },
       {
         "id": 6,
@@ -111,7 +116,8 @@ export class AppService {
         "lmsCalling": "Yes",
         "sourceType": "Online",
         "applicationStatus": "Approved",
-        "meetingDate": "2024-07-15"
+        "meetingDate": "2024-07-15",
+        "timestamp": ""
       },
       {
         "id": 7,
@@ -125,7 +131,8 @@ export class AppService {
         "lmsCalling": "No",
         "sourceType": "Online",
         "applicationStatus": "Pending",
-        "meetingDate": "2024-07-03"
+        "meetingDate": "2024-07-03",
+        "timestamp": ""
       },
       {
         "id": 8,
@@ -139,7 +146,8 @@ export class AppService {
         "lmsCalling": "Yes",
         "sourceType": "Referral",
         "applicationStatus": "Approved",
-        "meetingDate": "2024-06-17"
+        "meetingDate": "2024-06-17",
+        "timestamp": ""
       },
       {
         "id": 9,
@@ -153,7 +161,8 @@ export class AppService {
         "lmsCalling": "Yes",
         "sourceType": "Agent",
         "applicationStatus": "Rejected",
-        "meetingDate": "2024-05-30"
+        "meetingDate": "2024-05-30",
+        "timestamp": ""
       },
       {
         "id": 10,
@@ -167,7 +176,8 @@ export class AppService {
         "lmsCalling": "No",
         "sourceType": "Bank",
         "applicationStatus": "Online",
-        "meetingDate": "2024-05-15"
+        "meetingDate": "2024-05-15",
+        "timestamp": ""
       },
       {
         "id": 11,
@@ -181,7 +191,8 @@ export class AppService {
         "lmsCalling": "Yes",
         "sourceType": "Online",
         "applicationStatus": "Pending",
-        "meetingDate": "2024-05-03"
+        "meetingDate": "2024-05-03",
+        "timestamp": ""
       },
       {
         "id": 12,
@@ -195,7 +206,8 @@ export class AppService {
         "lmsCalling": "No",
         "sourceType": "Referral",
         "applicationStatus": "Approved",
-        "meetingDate": "2024-04-17"
+        "meetingDate": "2024-04-17",
+        "timestamp": ""
       },
       {
         "id": 13,
@@ -209,7 +221,8 @@ export class AppService {
         "lmsCalling": "Yes",
         "sourceType": "Agent",
         "applicationStatus": "Rejected",
-        "meetingDate": "2024-03-30"
+        "meetingDate": "2024-03-30",
+        "timestamp": ""
       },
       {
         "id": 14,
@@ -223,7 +236,8 @@ export class AppService {
         "lmsCalling": "No",
         "sourceType": "Bank",
         "applicationStatus": "Pending",
-        "meetingDate": "2024-03-15"
+        "meetingDate": "2024-03-15",
+        "timestamp": ""
       },
       {
         "id": 15,
@@ -237,7 +251,8 @@ export class AppService {
         "lmsCalling": "Yes",
         "sourceType": "Online",
         "applicationStatus": "Approved",
-        "meetingDate": "2024-03-05"
+        "meetingDate": "2024-03-05",
+        "timestamp": ""
       },
       {
         "id": 16,
@@ -251,7 +266,8 @@ export class AppService {
         "lmsCalling": "No",
         "sourceType": "Referral",
         "applicationStatus": "Online",
-        "meetingDate": "2024-02-17"
+        "meetingDate": "2024-02-17",
+        "timestamp": ""
       },
       {
         "id": 17,
@@ -265,7 +281,8 @@ export class AppService {
         "lmsCalling": "Yes",
         "sourceType": "Agent",
         "applicationStatus": "Pending",
-        "meetingDate": "2024-01-30"
+        "meetingDate": "2024-01-30",
+        "timestamp": ""
       },
       {
         "id": 18,
@@ -279,7 +296,8 @@ export class AppService {
         "lmsCalling": "No",
         "sourceType": "Bank",
         "applicationStatus": "Approved",
-        "meetingDate": "2023-12-15"
+        "meetingDate": "2023-12-15",
+        "timestamp": ""
       },
       {
         "id": 19,
@@ -293,7 +311,8 @@ export class AppService {
         "lmsCalling": "Yes",
         "sourceType": "Online",
         "applicationStatus": "Pending",
-        "meetingDate": "2023-11-30"
+        "meetingDate": "2023-11-30",
+        "timestamp": ""
       },
       {
         "id": 20,
@@ -307,7 +326,8 @@ export class AppService {
         "lmsCalling": "No",
         "sourceType": "Referral",
         "applicationStatus": "Online",
-        "meetingDate": "2023-11-15"
+        "meetingDate": "2023-11-15",
+        "timestamp": ""
       },
       {
         "id": 21,
@@ -321,7 +341,8 @@ export class AppService {
         "lmsCalling": "Yes",
         "sourceType": "Agent",
         "applicationStatus": "Approved",
-        "meetingDate": "2023-10-30"
+        "meetingDate": "2023-10-30",
+        "timestamp": ""
       },
       {
         "id": 22,
@@ -335,7 +356,8 @@ export class AppService {
         "lmsCalling": "No",
         "sourceType": "Bank",
         "applicationStatus": "Pending",
-        "meetingDate": "2023-10-15"
+        "meetingDate": "2023-10-15",
+        "timestamp": ""
       },
       {
         "id": 23,
@@ -349,7 +371,8 @@ export class AppService {
         "lmsCalling": "Yes",
         "sourceType": "Online",
         "applicationStatus": "Online",
-        "meetingDate": "2023-09-30"
+        "meetingDate": "2023-09-30",
+        "timestamp": ""
       },
       {
         "id": 24,
@@ -363,7 +386,8 @@ export class AppService {
         "lmsCalling": "No",
         "sourceType": "Referral",
         "applicationStatus": "Approved",
-        "meetingDate": "2023-09-15"
+        "meetingDate": "2023-09-15",
+        "timestamp": ""
       },
       {
         "id": 25,
@@ -377,7 +401,8 @@ export class AppService {
         "lmsCalling": "Yes",
         "sourceType": "Bank",
         "applicationStatus": "Pending",
-        "meetingDate": "2023-08-30"
+        "meetingDate": "2023-08-30",
+        "timestamp": ""
       },
       {
         "id": 26,
@@ -391,7 +416,8 @@ export class AppService {
         "lmsCalling": "No",
         "sourceType": "Online",
         "applicationStatus": "Online",
-        "meetingDate": "2023-08-15"
+        "meetingDate": "2023-08-15",
+        "timestamp": ""
       },
       {
         "id": 27,
@@ -405,7 +431,8 @@ export class AppService {
         "lmsCalling": "Yes",
         "sourceType": "Referral",
         "applicationStatus": "Approved",
-        "meetingDate": "2023-07-30"
+        "meetingDate": "2023-07-30",
+        "timestamp": ""
       },
       {
         "id": 28,
@@ -419,7 +446,8 @@ export class AppService {
         "lmsCalling": "No",
         "sourceType": "Agent",
         "applicationStatus": "Pending",
-        "meetingDate": "2023-07-15"
+        "meetingDate": "2023-07-15",
+        "timestamp": ""
       },
       {
         "id": 29,
@@ -433,7 +461,8 @@ export class AppService {
         "lmsCalling": "Yes",
         "sourceType": "Bank",
         "applicationStatus": "Online",
-        "meetingDate": "2023-06-30"
+        "meetingDate": "2023-06-30",
+        "timestamp": ""
       },
       {
         "id": 30,
@@ -447,7 +476,8 @@ export class AppService {
         "lmsCalling": "No",
         "sourceType": "Online",
         "applicationStatus": "Approved",
-        "meetingDate": "2023-06-15"
+        "meetingDate": "2023-06-15",
+        "timestamp": ""
       }
     ]
 
@@ -465,7 +495,8 @@ export class AppService {
         "product": "home loan",
         "openQueries": "0",
         "property": "Y",
-        "loanAmount": "1000000"
+        "loanAmount": "1000000",
+        "timestamp": ""
       },
       {
         "id": 2,
@@ -477,7 +508,8 @@ export class AppService {
         "product": "car loan",
         "openQueries": "2",
         "property": "N",
-        "loanAmount": "50000"
+        "loanAmount": "50000",
+        "timestamp": ""
       },
       {
         "id": 3,
@@ -489,7 +521,8 @@ export class AppService {
         "product": "personal loan",
         "openQueries": "1",
         "property": "Y",
-        "loanAmount": "75000"
+        "loanAmount": "75000",
+        "timestamp": ""
       },
       {
         "id": 4,
@@ -501,7 +534,8 @@ export class AppService {
         "product": "education loan",
         "openQueries": "3",
         "property": "N",
-        "loanAmount": "120000"
+        "loanAmount": "120000",
+        "timestamp": ""
       },
       {
         "id": 5,
@@ -513,7 +547,8 @@ export class AppService {
         "product": "home loan",
         "openQueries": "0",
         "property": "Y",
-        "loanAmount": "1000000"
+        "loanAmount": "1000000",
+        "timestamp": ""
       },
       {
         "id": 6,
@@ -525,7 +560,8 @@ export class AppService {
         "product": "car loan",
         "openQueries": "2",
         "property": "N",
-        "loanAmount": "50000"
+        "loanAmount": "50000",
+        "timestamp": ""
       },
       {
         "id": 7,
@@ -537,7 +573,8 @@ export class AppService {
         "product": "personal loan",
         "openQueries": "1",
         "property": "Y",
-        "loanAmount": "75000"
+        "loanAmount": "75000",
+        "timestamp": ""
       },
       {
         "id": 8,
@@ -549,7 +586,8 @@ export class AppService {
         "product": "education loan",
         "openQueries": "3",
         "property": "N",
-        "loanAmount": "120000"
+        "loanAmount": "120000",
+        "timestamp": ""
       },
       {
         "id": 9,
@@ -561,7 +599,8 @@ export class AppService {
         "product": "business loan",
         "openQueries": "0",
         "property": "Y",
-        "loanAmount": "200000"
+        "loanAmount": "200000",
+        "timestamp": ""
       },
       {
         "id": 10,
@@ -573,7 +612,8 @@ export class AppService {
         "product": "business loan",
         "openQueries": "1",
         "property": "Y",
-        "loanAmount": "250000"
+        "loanAmount": "250000",
+        "timestamp": ""
       },
       {
         "id": 11,
@@ -585,7 +625,8 @@ export class AppService {
         "product": "personal loan",
         "openQueries": "2",
         "property": "N",
-        "loanAmount": "70000"
+        "loanAmount": "70000",
+        "timestamp": ""
       },
       {
         "id": 12,
@@ -597,7 +638,8 @@ export class AppService {
         "product": "home loan",
         "openQueries": "0",
         "property": "Y",
-        "loanAmount": "180000"
+        "loanAmount": "180000",
+        "timestamp": ""
       },
       {
         "id": 13,
@@ -609,7 +651,8 @@ export class AppService {
         "product": "car loan",
         "openQueries": "3",
         "property": "N",
-        "loanAmount": "80000"
+        "loanAmount": "80000",
+        "timestamp": ""
       },
       {
         "id": 14,
@@ -621,7 +664,8 @@ export class AppService {
         "product": "business loan",
         "openQueries": "1",
         "property": "Y",
-        "loanAmount": "220000"
+        "loanAmount": "220000",
+        "timestamp": ""
       },
       {
         "id": 15,
@@ -633,7 +677,8 @@ export class AppService {
         "product": "education loan",
         "openQueries": "0",
         "property": "N",
-        "loanAmount": "120000"
+        "loanAmount": "120000",
+        "timestamp": ""
       },
       {
         "id": 16,
@@ -645,7 +690,8 @@ export class AppService {
         "product": "car loan",
         "openQueries": "2",
         "property": "N",
-        "loanAmount": "65000"
+        "loanAmount": "65000",
+        "timestamp": ""
       },
       {
         "id": 17,
@@ -657,7 +703,8 @@ export class AppService {
         "product": "home loan",
         "openQueries": "1",
         "property": "Y",
-        "loanAmount": "160000"
+        "loanAmount": "160000",
+        "timestamp": ""
       },
       {
         "id": 18,
@@ -669,7 +716,8 @@ export class AppService {
         "product": "business loan",
         "openQueries": "0",
         "property": "Y",
-        "loanAmount": "210000"
+        "loanAmount": "210000",
+        "timestamp": ""
       },
       {
         "id": 19,
@@ -681,7 +729,8 @@ export class AppService {
         "product": "personal loan",
         "openQueries": "3",
         "property": "N",
-        "loanAmount": "95000"
+        "loanAmount": "95000",
+        "timestamp": ""
       },
       {
         "id": 20,
@@ -693,7 +742,8 @@ export class AppService {
         "product": "education loan",
         "openQueries": "1",
         "property": "Y",
-        "loanAmount": "130000"
+        "loanAmount": "130000",
+        "timestamp": ""
       },
       {
         "id": 21,
@@ -705,7 +755,8 @@ export class AppService {
         "product": "car loan",
         "openQueries": "2",
         "property": "N",
-        "loanAmount": "72000"
+        "loanAmount": "72000",
+        "timestamp": ""
       },
       {
         "id": 22,
@@ -717,7 +768,8 @@ export class AppService {
         "product": "business loan",
         "openQueries": "1",
         "property": "Y",
-        "loanAmount": "185000"
+        "loanAmount": "185000",
+        "timestamp": ""
       },
       {
         "id": 23,
@@ -729,7 +781,8 @@ export class AppService {
         "product": "home loan",
         "openQueries": "0",
         "property": "Y",
-        "loanAmount": "140000"
+        "loanAmount": "140000",
+        "timestamp": ""
       },
       {
         "id": 24,
@@ -741,7 +794,8 @@ export class AppService {
         "product": "personal loan",
         "openQueries": "3",
         "property": "N",
-        "loanAmount": "88000"
+        "loanAmount": "88000",
+        "timestamp": ""
       },
       {
         "id": 25,
@@ -753,7 +807,8 @@ export class AppService {
         "product": "education loan",
         "openQueries": "1",
         "property": "Y",
-        "loanAmount": "155000"
+        "loanAmount": "155000",
+        "timestamp": ""
       }
     ]
   }
@@ -771,7 +826,8 @@ export class AppService {
         "openQueries": "0",
         "property": "Y",
         "disbAmt": "10000",
-        "loanAmount": "10000000"
+        "loanAmount": "10000000",
+        "timestamp": ""
       },
       {
         "id": 2,
@@ -784,7 +840,8 @@ export class AppService {
         "openQueries": "2",
         "property": "N",
         "disbAmt": "8000",
-        "loanAmount": "50000"
+        "loanAmount": "50000",
+        "timestamp": ""
       },
       {
         "id": 3,
@@ -797,7 +854,8 @@ export class AppService {
         "openQueries": "1",
         "property": "Y",
         "disbAmt": "12000",
-        "loanAmount": "75000"
+        "loanAmount": "75000",
+        "timestamp": ""
       },
       {
         "id": 4,
@@ -810,7 +868,8 @@ export class AppService {
         "openQueries": "3",
         "property": "N",
         "disbAmt": "15000",
-        "loanAmount": "120000"
+        "loanAmount": "120000",
+        "timestamp": ""
       },
       {
         "id": 5,
@@ -823,7 +882,8 @@ export class AppService {
         "openQueries": "0",
         "property": "Y",
         "disbAmt": "20000",
-        "loanAmount": "200000"
+        "loanAmount": "200000",
+        "timestamp": ""
       },
       {
         "id": 6,
@@ -836,7 +896,8 @@ export class AppService {
         "openQueries": "2",
         "property": "N",
         "disbAmt": "9000",
-        "loanAmount": "90000"
+        "loanAmount": "90000",
+        "timestamp": ""
       },
       {
         "id": 7,
@@ -849,7 +910,8 @@ export class AppService {
         "openQueries": "1",
         "property": "Y",
         "disbAmt": "18000",
-        "loanAmount": "150000"
+        "loanAmount": "150000",
+        "timestamp": ""
       },
       {
         "id": 8,
@@ -862,7 +924,8 @@ export class AppService {
         "openQueries": "0",
         "property": "N",
         "disbAmt": "6000",
-        "loanAmount": "60000"
+        "loanAmount": "60000",
+        "timestamp": ""
       },
       {
         "id": 9,
@@ -875,7 +938,8 @@ export class AppService {
         "openQueries": "3",
         "property": "Y",
         "disbAmt": "11000",
-        "loanAmount": "110000"
+        "loanAmount": "110000",
+        "timestamp": ""
       },
       {
         "id": 10,
@@ -888,7 +952,8 @@ export class AppService {
         "openQueries": "1",
         "property": "Y",
         "disbAmt": "25000",
-        "loanAmount": "250000"
+        "loanAmount": "250000",
+        "timestamp": ""
       },
       {
         "id": 11,
@@ -901,7 +966,8 @@ export class AppService {
         "openQueries": "2",
         "property": "N",
         "disbAmt": "7000",
-        "loanAmount": "70000"
+        "loanAmount": "70000",
+        "timestamp": ""
       },
       {
         "id": 12,
@@ -914,7 +980,8 @@ export class AppService {
         "openQueries": "0",
         "property": "Y",
         "disbAmt": "18000",
-        "loanAmount": "180000"
+        "loanAmount": "180000",
+        "timestamp": ""
       },
       {
         "id": 13,
@@ -927,7 +994,8 @@ export class AppService {
         "openQueries": "3",
         "property": "N",
         "disbAmt": "8000",
-        "loanAmount": "80000"
+        "loanAmount": "80000",
+        "timestamp": ""
       },
       {
         "id": 14,
@@ -940,7 +1008,8 @@ export class AppService {
         "openQueries": "1",
         "property": "Y",
         "disbAmt": "22000",
-        "loanAmount": "220000"
+        "loanAmount": "220000",
+        "timestamp": ""
       },
       {
         "id": 15,
@@ -953,7 +1022,8 @@ export class AppService {
         "openQueries": "0",
         "property": "N",
         "disbAmt": "12000",
-        "loanAmount": "120000"
+        "loanAmount": "120000",
+        "timestamp": ""
       },
       {
         "id": 16,
@@ -966,7 +1036,8 @@ export class AppService {
         "openQueries": "2",
         "property": "N",
         "disbAmt": "6500",
-        "loanAmount": "65000"
+        "loanAmount": "65000",
+        "timestamp": ""
       },
       {
         "id": 17,
@@ -979,7 +1050,8 @@ export class AppService {
         "openQueries": "1",
         "property": "Y",
         "disbAmt": "16000",
-        "loanAmount": "160000"
+        "loanAmount": "160000",
+        "timestamp": ""
       },
       {
         "id": 18,
@@ -992,7 +1064,8 @@ export class AppService {
         "openQueries": "0",
         "property": "Y",
         "disbAmt": "21000",
-        "loanAmount": "210000"
+        "loanAmount": "210000",
+        "timestamp": ""
       },
       {
         "id": 19,
@@ -1005,7 +1078,8 @@ export class AppService {
         "openQueries": "3",
         "property": "N",
         "disbAmt": "9500",
-        "loanAmount": "95000"
+        "loanAmount": "95000",
+        "timestamp": ""
       },
       {
         "id": 20,
@@ -1018,7 +1092,8 @@ export class AppService {
         "openQueries": "1",
         "property": "Y",
         "disbAmt": "13000",
-        "loanAmount": "130000"
+        "loanAmount": "130000",
+        "timestamp": ""
       },
       {
         "id": 21,
@@ -1031,7 +1106,8 @@ export class AppService {
         "openQueries": "2",
         "property": "N",
         "disbAmt": "7200",
-        "loanAmount": "72000"
+        "loanAmount": "72000",
+        "timestamp": ""
       },
       {
         "id": 22,
@@ -1044,7 +1120,8 @@ export class AppService {
         "openQueries": "1",
         "property": "Y",
         "disbAmt": "18500",
-        "loanAmount": "185000"
+        "loanAmount": "185000",
+        "timestamp": ""
       },
       {
         "id": 23,
@@ -1057,7 +1134,8 @@ export class AppService {
         "openQueries": "0",
         "property": "Y",
         "disbAmt": "14000",
-        "loanAmount": "140000"
+        "loanAmount": "140000",
+        "timestamp": ""
       },
       {
         "id": 24,
@@ -1070,7 +1148,8 @@ export class AppService {
         "openQueries": "3",
         "property": "N",
         "disbAmt": "8800",
-        "loanAmount": "88000"
+        "loanAmount": "88000",
+        "timestamp": ""
       },
       {
         "id": 25,
@@ -1083,7 +1162,8 @@ export class AppService {
         "openQueries": "1",
         "property": "Y",
         "disbAmt": "15500",
-        "loanAmount": "155000"
+        "loanAmount": "155000",
+        "timestamp": ""
       }
     ]
   }
