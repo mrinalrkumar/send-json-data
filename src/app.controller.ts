@@ -29,4 +29,9 @@ export class AppController {
   getDisbSummary(): any {
     return this.appService.getDisbSummary();
   }
+
+  @Get('querySummary')
+  getQuerySummary(): any {
+    return this.appService.getQuerySummary();
+  }
 }

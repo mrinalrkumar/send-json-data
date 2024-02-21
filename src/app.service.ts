@@ -1167,4 +1167,240 @@ export class AppService {
       }
     ]
   }
+
+  getQuerySummary(): any {
+    return [
+      {
+        "id": 1,
+        "name": "Joe",
+        "employmentType": "Salaried",
+        "queryDesc": "CR/APPR",
+        "fileNo": "12312312",
+        "generated": "2023-12-12",
+        "loanAmount": "1000000",
+        "openQueries": "3",
+        "timestamp": ""
+      },
+      {
+        "id": 2,
+        "name": "Joe",
+        "employmentType": "Salaried",
+        "queryDesc": "CR/APPR",
+        "fileNo": "12312312",
+        "generated": "2023-12-12",
+        "loanAmount": "1000000",
+        "openQueries": "3",
+        "timestamp": ""
+      },
+      {
+        "id": 3,
+        "name": "Bob",
+        "employmentType": "Full-time",
+        "queryDesc": "CREDIT CARD",
+        "fileNo": "76543210",
+        "generated": "2023-09-03",
+        "loanAmount": "300000",
+        "openQueries": "4",
+        "timestamp": ""
+      },
+      {
+        "id": 4,
+        "name": "Emma",
+        "employmentType": "Salaried",
+        "queryDesc": "AUTO LOAN",
+        "fileNo": "65432109",
+        "generated": "2023-08-22",
+        "loanAmount": "200000",
+        "openQueries": "0",
+        "timestamp": ""
+      },
+      {
+        "id": 5,
+        "name": "David",
+        "employmentType": "Freelance",
+        "queryDesc": "PERSONAL LOAN",
+        "fileNo": "54321098",
+        "generated": "2023-07-10",
+        "loanAmount": "600000",
+        "openQueries": "2",
+        "timestamp": ""
+      },
+      {
+        "id": 6,
+        "name": "Sophie",
+        "employmentType": "Part-time",
+        "queryDesc": "HOME LOAN",
+        "fileNo": "43210987",
+        "generated": "2023-06-05",
+        "loanAmount": "900000",
+        "openQueries": "1",
+        "timestamp": ""
+      },
+      {
+        "id": 7,
+        "name": "Michael",
+        "employmentType": "Salaried",
+        "queryDesc": "STUDENT LOAN",
+        "fileNo": "32109876",
+        "generated": "2023-05-18",
+        "loanAmount": "400000",
+        "openQueries": "3",
+        "timestamp": ""
+      },
+      {
+        "id": 8,
+        "name": "Olivia",
+        "employmentType": "Full-time",
+        "queryDesc": "BUSINESS LOAN",
+        "fileNo": "21098765",
+        "generated": "2023-04-01",
+        "loanAmount": "800000",
+        "openQueries": "2",
+        "timestamp": ""
+      },
+      {
+        "id": 9,
+        "name": "Daniel",
+        "employmentType": "Contract",
+        "queryDesc": "MEDICAL LOAN",
+        "fileNo": "10987654",
+        "generated": "2023-03-12",
+        "loanAmount": "700000",
+        "openQueries": "1",
+        "timestamp": ""
+      },
+      {
+        "id": 10,
+        "name": "Ava",
+        "employmentType": "Freelance",
+        "queryDesc": "EDUCATION LOAN",
+        "fileNo": "09876543",
+        "generated": "2023-02-28",
+        "loanAmount": "350000",
+        "openQueries": "4",
+        "timestamp": ""
+      },
+      {
+        "id": 11,
+        "name": "Liam",
+        "employmentType": "Part-time",
+        "queryDesc": "CAR LOAN",
+        "fileNo": "11223344",
+        "generated": "2023-05-15",
+        "loanAmount": "600000",
+        "openQueries": "2",
+        "timestamp": ""
+      },
+      {
+        "id": 12,
+        "name": "Sophia",
+        "employmentType": "Salaried",
+        "queryDesc": "HOME IMPROVEMENT LOAN",
+        "fileNo": "22334455",
+        "generated": "2023-07-20",
+        "loanAmount": "800000",
+        "openQueries": "1",
+        "timestamp": ""
+      },
+      {
+        "id": 13,
+        "name": "Jackson",
+        "employmentType": "Contract",
+        "queryDesc": "PERSONAL LOAN",
+        "fileNo": "33445566",
+        "generated": "2023-09-10",
+        "loanAmount": "450000",
+        "openQueries": "3",
+        "timestamp": ""
+      },
+      {
+        "id": 14,
+        "name": "Emma",
+        "employmentType": "Full-time",
+        "queryDesc": "AUTO LOAN",
+        "fileNo": "44556677",
+        "generated": "2023-11-05",
+        "loanAmount": "700000",
+        "openQueries": "0",
+        "timestamp": ""
+      },
+      {
+        "id": 15,
+        "name": "Oliver",
+        "employmentType": "Freelance",
+        "queryDesc": "BUSINESS LOAN",
+        "fileNo": "55667788",
+        "generated": "2024-01-01",
+        "loanAmount": "900000",
+        "openQueries": "2",
+        "timestamp": ""
+      },
+      {
+        "id": 16,
+        "name": "Aria",
+        "employmentType": "Part-time",
+        "queryDesc": "MEDICAL LOAN",
+        "fileNo": "66778899",
+        "generated": "2024-02-15",
+        "loanAmount": "550000",
+        "openQueries": "1",
+        "timestamp": ""
+      },
+      {
+        "id": 17,
+        "name": "Henry",
+        "employmentType": "Salaried",
+        "queryDesc": "STUDENT LOAN",
+        "fileNo": "77889900",
+        "generated": "2024-03-12",
+        "loanAmount": "650000",
+        "openQueries": "4",
+        "timestamp": ""
+      },
+      {
+        "id": 18,
+        "name": "Mia",
+        "employmentType": "Contract",
+        "queryDesc": "HOME LOAN",
+        "fileNo": "88990011",
+        "generated": "2024-04-18",
+        "loanAmount": "750000",
+        "openQueries": "3",
+        "timestamp": ""
+      },
+      {
+        "id": 19,
+        "name": "William",
+        "employmentType": "Freelance",
+        "queryDesc": "CAR LOAN",
+        "fileNo": "99001122",
+        "generated": "2024-05-25",
+        "loanAmount": "500000",
+        "openQueries": "2",
+        "timestamp": ""
+      },
+      {
+        "id": 20,
+        "name": "Isabella",
+        "employmentType": "Full-time",
+        "queryDesc": "PERSONAL LOAN",
+        "fileNo": "00112233",
+        "generated": "2024-06-30",
+        "loanAmount": "850000",
+        "openQueries": "1",
+        "timestamp": ""
+      },
+      {
+        "id": 21,
+        "name": "Ethan",
+        "employmentType": "Salaried",
+        "queryDesc": "HOME IMPROVEMENT LOAN",
+        "fileNo": "11223344",
+        "generated": "2023-04-15",
+        "loanAmount": "600000",
+        "openQueries": "2",
+        "timestamp": ""
+      }
+    ]
+  }
 }
