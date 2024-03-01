@@ -43,7 +43,8 @@ export class AppService implements OnModuleInit {
     const query = `SELECT * FROM \`lead\` WHERE userId = $userId`;
     const options = { parameters: { userId: userInfoDto.userId } };
     const leadData: QueryResult = await this.bucket.scope('database').query(query, options)
-    return leadData.rows
+    const leadDataArray = leadData.rows.map(obj => obj.lead);
+    return leadDataArray
   }
 
   async getFileSummary(userInfoDto: UserInfoDto): Promise<any> {
@@ -58,13 +59,15 @@ export class AppService implements OnModuleInit {
     const query = `SELECT * FROM \`disbursment\` WHERE userId = $userId`;
     const options = { parameters: { userId: userInfoDto.userId } };
     const disbData: QueryResult = await this.bucket.scope('database').query(query, options)
-    return disbData.rows
+    const disbDataArray = disbData.rows.map(obj => obj.disbursment);
+    return disbDataArray
   }
 
   async getQuerySummary(userInfoDto: UserInfoDto): Promise<any> {
     const query = `SELECT * FROM \`query\` WHERE userId = $userId`;
     const options = { parameters: { userId: userInfoDto.userId } };
     const queryData: QueryResult = await this.bucket.scope('database').query(query, options)
-    return queryData.rows
+    const queryDataArray = queryData.rows.map(obj => obj.query);
+    return queryDataArray
   }
 }
