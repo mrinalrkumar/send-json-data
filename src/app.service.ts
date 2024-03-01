@@ -50,7 +50,8 @@ export class AppService implements OnModuleInit {
     const query = `SELECT * FROM \`file\` WHERE userId = $userId`;
     const options = { parameters: { userId: userInfoDto.userId } };
     const fileData: QueryResult = await this.bucket.scope('database').query(query, options)
-    return fileData.rows
+    const fileDataArray = fileData.rows.map(obj => obj.file);
+    return fileDataArray
   }
 
   async getDisbSummary(userInfoDto: UserInfoDto): Promise<any> {
