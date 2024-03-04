@@ -2,7 +2,7 @@
 import { Injectable, OnModuleInit } from '@nestjs/common';
 import { UserInfoDto } from './dto/user-info.dto';
 import { CouchBaseAdapterService } from './couch-base-adapter/couch-base-adapter.service';
-import { Bucket, Cluster, Collection, QueryResult } from 'couchbase';
+import { Bucket, Cluster, Collection, DocumentNotFoundError, QueryResult } from 'couchbase';
 interface DataItem {
   id: number;
   text: string;
@@ -40,10 +40,15 @@ export class AppService implements OnModuleInit {
   }
 
   async getLeadSummary(userInfoDto: UserInfoDto): Promise<any> {
-    const query = `SELECT * FROM \`lead\` WHERE userId = $userId`;
+    const query = `SELECT META().id as id, * FROM \`lead\` WHERE userId = $userId`;
     const options = { parameters: { userId: userInfoDto.userId } };
     const leadData: QueryResult = await this.bucket.scope('database').query(query, options)
+    console.log(leadData.rows)
     const leadDataArray = leadData.rows.map(obj => obj.lead);
+    console.log(leadData.rows===null)
+    if(leadData.rows===null){
+      return DocumentNotFoundError
+    }
     return leadDataArray
   }
 
@@ -53,6 +58,14 @@ export class AppService implements OnModuleInit {
     const fileData: QueryResult = await this.bucket.scope('database').query(query, options)
     const fileDataArray = fileData.rows.map(obj => obj.file);
     return fileDataArray
+  }
+
+  async getSources(userInfoDto: UserInfoDto): Promise<any> {
+    const query = `SELECT * FROM \`source\` WHERE userId = $userId`;
+    const options = { parameters: { userId: userInfoDto.userId } };
+    const sourceData: QueryResult = await this.bucket.scope('database').query(query, options)
+    const sourceDataArray = sourceData.rows.map(obj => obj.source);
+    return sourceDataArray
   }
 
   async getDisbSummary(userInfoDto: UserInfoDto): Promise<any> {

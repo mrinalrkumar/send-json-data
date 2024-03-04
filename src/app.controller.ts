@@ -35,4 +35,9 @@ export class AppController {
   async getQuerySummary(@Body() userInfoDto: UserInfoDto): Promise<any> {
     return this.appService.getQuerySummary(userInfoDto);
   }
+
+  @Post('sources')
+  async getSources(@Body() userInfoDto: UserInfoDto): Promise<any> {
+    return this.appService.getSources(userInfoDto);
+  }
 }

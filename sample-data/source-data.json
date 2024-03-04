@@ -1,0 +1,145 @@
+[
+    {
+        "userId": "1234A",
+        "sourceName": "Alice",
+        "employmentType": "Full-time",
+        "statusDesc": "Verified",
+        "sourceId": "20240304",
+        "status": "Active",
+        "availableUnits": "12",
+        "keyPerson": "Alice",
+        "timestamp": "2024-03-04T10:15:30"
+    },
+    {
+        "userId": "1234A",
+        "sourceName": "Bob",
+        "employmentType": "Part-time",
+        "statusDesc": "Pending",
+        "sourceId": "20240305",
+        "status": "Inactive",
+        "availableUnits": "5",
+        "keyPerson": "Bob",
+        "timestamp": "2024-03-04T11:30:45"
+    },
+    {
+        "userId": "1234A",
+        "sourceName": "Charlie",
+        "employmentType": "Freelancer",
+        "statusDesc": "Verified",
+        "sourceId": "20240306",
+        "status": "Active",
+        "availableUnits": "10",
+        "keyPerson": "Charlie",
+        "timestamp": "2024-03-04T12:45:15"
+    },
+    {
+        "userId": "1234Q",
+        "sourceName": "Eva",
+        "employmentType": "Contractor",
+        "statusDesc": "Pending",
+        "sourceId": "20240307",
+        "status": "Inactive",
+        "availableUnits": "7",
+        "keyPerson": "Eva",
+        "timestamp": "2024-03-04T14:00:00"
+    },
+    {
+        "userId": "1234Q",
+        "sourceName": "Frank",
+        "employmentType": "Intern",
+        "statusDesc": "Verified",
+        "sourceId": "20240308",
+        "status": "Active",
+        "availableUnits": "3",
+        "keyPerson": "Frank",
+        "timestamp": "2024-03-04T15:15:30"
+    },
+    {
+        "userId": "1234Q",
+        "sourceName": "Grace",
+        "employmentType": "Full-time",
+        "statusDesc": "Verified",
+        "sourceId": "20240309",
+        "status": "Active",
+        "availableUnits": "15",
+        "keyPerson": "Grace",
+        "timestamp": "2024-03-04T16:30:45"
+    },
+    {
+        "userId": "1234Q",
+        "sourceName": "Harry",
+        "employmentType": "Part-time",
+        "statusDesc": "Pending",
+        "sourceId": "20240310",
+        "status": "Inactive",
+        "availableUnits": "8",
+        "keyPerson": "Harry",
+        "timestamp": "2024-03-04T17:45:15"
+    },
+    {
+        "userId": "1234Q",
+        "sourceName": "Ivy",
+        "employmentType": "Freelancer",
+        "statusDesc": "Verified",
+        "sourceId": "20240311",
+        "status": "Active",
+        "availableUnits": "11",
+        "keyPerson": "Ivy",
+        "timestamp": "2024-03-04T19:00:00"
+    },
+    {
+        "userId": "1234M",
+        "sourceName": "Eve",
+        "employmentType": "Contractor",
+        "statusDesc": "Pending",
+        "sourceId": "20240307",
+        "status": "Inactive",
+        "availableUnits": "7",
+        "keyPerson": "Eve",
+        "timestamp": "2024-03-04T14:00:00"
+    },
+    {
+        "userId": "1234M",
+        "sourceName": "Frank",
+        "employmentType": "Full-time",
+        "statusDesc": "Verified",
+        "sourceId": "20240308",
+        "status": "Active",
+        "availableUnits": "15",
+        "keyPerson": "Frank",
+        "timestamp": "2024-03-04T15:15:30"
+    },
+    {
+        "userId": "1234M",
+        "sourceName": "Grace",
+        "employmentType": "Part-time",
+        "statusDesc": "Verified",
+        "sourceId": "20240309",
+        "status": "Active",
+        "availableUnits": "8",
+        "keyPerson": "Grace",
+        "timestamp": "2024-03-04T16:30:45"
+    },
+    {
+        "userId": "1234M",
+        "sourceName": "Harry",
+        "employmentType": "Freelancer",
+        "statusDesc": "Verified",
+        "sourceId": "20240310",
+        "status": "Active",
+        "availableUnits": "11",
+        "keyPerson": "Harry",
+        "timestamp": "2024-03-04T17:45:15"
+    },
+    {
+        "userId": "1234M",
+        "sourceName": "Ivy",
+        "employmentType": "Full-time",
+        "statusDesc": "Pending",
+        "sourceId": "20240311",
+        "status": "Inactive",
+        "availableUnits": "6",
+        "keyPerson": "Ivy",
+        "timestamp": "2024-03-04T19:00:30"
+    }
+]
