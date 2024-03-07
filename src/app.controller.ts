@@ -1,6 +1,7 @@
 import { Body, Controller, Get, Post } from '@nestjs/common';
 import { AppService } from './app.service';
 import { UserInfoDto } from './dto/user-info.dto';
+import { AttendanceDto } from './dto/attendance-info.dto';
 
 interface DataItem {
   id: number;
@@ -39,5 +40,11 @@ export class AppController {
   @Post('sources')
   async getSources(@Body() userInfoDto: UserInfoDto): Promise<any> {
     return this.appService.getSources(userInfoDto);
+  }
+
+  @Post('attendance')
+  async getAttendance(@Body() attendanceDto: AttendanceDto): Promise<any> {
+    console.log(attendanceDto)
+    return this.appService.getAttendance(attendanceDto);
   }
 }

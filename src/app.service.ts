@@ -3,6 +3,7 @@ import { Injectable, OnModuleInit } from '@nestjs/common';
 import { UserInfoDto } from './dto/user-info.dto';
 import { CouchBaseAdapterService } from './couch-base-adapter/couch-base-adapter.service';
 import { Bucket, Cluster, Collection, DocumentNotFoundError, QueryResult } from 'couchbase';
+import { AttendanceDto } from './dto/attendance-info.dto';
 interface DataItem {
   id: number;
   text: string;
@@ -39,6 +40,10 @@ export class AppService implements OnModuleInit {
     return this.data;
   }
 
+  async getAttendance(attendanceDto: AttendanceDto): Promise<any> {
+    return true
+  }
+
   async getLeadSummary(userInfoDto: UserInfoDto): Promise<any> {
     const query = `SELECT META().id as id, * FROM \`lead\` WHERE userId = $userId`;
     const options = { parameters: { userId: userInfoDto.userId } };
@@ -63,6 +68,7 @@ export class AppService implements OnModuleInit {
   async getSources(userInfoDto: UserInfoDto): Promise<any> {
     const query = `SELECT * FROM \`source\` WHERE userId = $userId`;
     const options = { parameters: { userId: userInfoDto.userId } };
+    console.log(userInfoDto)
     const sourceData: QueryResult = await this.bucket.scope('database').query(query, options)
     const sourceDataArray = sourceData.rows.map(obj => obj.source);
     return sourceDataArray
