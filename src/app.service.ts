@@ -4,6 +4,7 @@ import { UserInfoDto } from './dto/user-info.dto';
 import { CouchBaseAdapterService } from './couch-base-adapter/couch-base-adapter.service';
 import { Bucket, Cluster, Collection, DocumentNotFoundError, QueryResult } from 'couchbase';
 import { AttendanceDto } from './dto/attendance-info.dto';
+import * as dayjs from "dayjs"
 interface DataItem {
   id: number;
   text: string;
@@ -36,8 +37,78 @@ export class AppService implements OnModuleInit {
     { id: 10, text: "SANCTION", value: 0 }
   ];
 
+  private readonly diarySummary = [
+    {
+      "userId": "1234A",
+      "date": dayjs(),
+      "lead" : {
+        "missed": "5",
+        "achieved": "7"
+      },
+      "file" : {
+        "missed": "4",
+        "achieved": "7"
+      },
+      "disb" : {
+        "missed": "1",
+        "achieved": "7"
+      },
+      "query" : {
+        "missed": "5",
+        "achieved": "8"
+      },
+      "source": {
+        "missed": "5",
+        "achieved": "8"
+      },
+      "goal": {
+        "missed": "5",
+        "achieved": "8"
+      },
+      "upcomigActivity": {
+        "time": "07/03/2024"
+      }
+    },
+    {
+      "userId": "1234M",
+      "date": dayjs(),
+      "lead" : {
+        "missed": "5",
+        "achieved": "7"
+      },
+      "file" : {
+        "missed": "4",
+        "achieved": "7"
+      },
+      "disb" : {
+        "missed": "1",
+        "achieved": "7"
+      },
+      "query" : {
+        "missed": "5",
+        "achieved": "8"
+      },
+      "source": {
+        "missed": "8",
+        "achieved": "8"
+      },
+      "goal": {
+        "missed": "5",
+        "achieved": "4"
+      },
+      "upcomigActivity": {
+        "time": "07/03/2024"
+      }
+    }
+  ];
+
   getHello(): DataItem[] {
     return this.data;
+  }
+
+  async getDiarySummary(userInfoDto: UserInfoDto): Promise<any> {
+    const filteredData = this.diarySummary.filter((item) => item.userId === userInfoDto.userId);
+    return filteredData
   }
 
   async getAttendance(attendanceDto: AttendanceDto): Promise<any> {

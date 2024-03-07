@@ -47,4 +47,9 @@ export class AppController {
     console.log(attendanceDto)
     return this.appService.getAttendance(attendanceDto);
   }
+
+  @Post('diarySummary')
+  async getDiarySummary(@Body() userInfoDto: UserInfoDto): Promise<any> {
+    return this.appService.getDiarySummary(userInfoDto);
+  }
 }
