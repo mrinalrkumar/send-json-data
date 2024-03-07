@@ -1,5 +1,7 @@
-import { Controller, Get } from '@nestjs/common';
+import { Body, Controller, Get, Post } from '@nestjs/common';
 import { AppService } from './app.service';
+import { UserInfoDto } from './dto/user-info.dto';
+import { AttendanceDto } from './dto/attendance-info.dto';
 
 interface DataItem {
   id: number;
@@ -15,23 +17,39 @@ export class AppController {
     return this.appService.getHello();
   }
 
-  @Get('leadSummary')
-  getLeadSummary(): any {
-    return this.appService.getLeadSummary();
+  @Post('leadSummary')
+  async getLeadSummary(@Body() userInfoDto: UserInfoDto): Promise<any> {
+    return this.appService.getLeadSummary(userInfoDto);
   }
 
-  @Get('fileSummary')
-  getFileSummary(): any {
-    return this.appService.getFileSummary();
+  @Post('fileSummary')
+  async getFileSummary(@Body() userInfoDto: UserInfoDto): Promise<any> {
+    return this.appService.getFileSummary(userInfoDto);
   }
 
-  @Get('disbSummary')
-  getDisbSummary(): any {
-    return this.appService.getDisbSummary();
+  @Post('disbSummary')
+  async getDisbSummary(@Body() userInfoDto: UserInfoDto): Promise<any> {
+    return this.appService.getDisbSummary(userInfoDto);
   }
 
-  @Get('querySummary')
-  getQuerySummary(): any {
-    return this.appService.getQuerySummary();
+  @Post('querySummary')
+  async getQuerySummary(@Body() userInfoDto: UserInfoDto): Promise<any> {
+    return this.appService.getQuerySummary(userInfoDto);
+  }
+
+  @Post('sources')
+  async getSources(@Body() userInfoDto: UserInfoDto): Promise<any> {
+    return this.appService.getSources(userInfoDto);
+  }
+
+  @Post('attendance')
+  async getAttendance(@Body() attendanceDto: AttendanceDto): Promise<any> {
+    console.log(attendanceDto)
+    return this.appService.getAttendance(attendanceDto);
+  }
+
+  @Post('diarySummary')
+  async getDiarySummary(@Body() userInfoDto: UserInfoDto): Promise<any> {
+    return this.appService.getDiarySummary(userInfoDto);
   }
 }
