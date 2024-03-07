@@ -1,12 +1,12 @@
 import { IsDefined, IsEnum, IsNotEmpty, IsString, ValidateIf, ValidateNested } from "class-validator";
 
 enum AttendanceType {
-    I = 'I',
-    O = 'O',
-    L = 'L'
+    IN = 'IN',
+    OUT = 'OUT',
+    LEAVE = 'LEAVE'
 }
 
-class LeaveTypeDto{
+class LeaveTypeDto {
     @IsString()
     @IsNotEmpty()
     fromDate: string;
@@ -30,18 +30,18 @@ export class AttendanceDto {
     status: AttendanceType;
 
     @IsString()
-    @ValidateIf((object) => object.status === 'I')
+    @ValidateIf((object) => object.status === 'IN')
     @IsNotEmpty()
     @IsDefined()
     inTime: string;
 
     @IsString()
-    @ValidateIf((object) => object.status === 'O')
+    @ValidateIf((object) => object.status === 'OUT')
     @IsNotEmpty()
     @IsDefined()
     outTime: string;
 
-    @ValidateIf((object) => object.status === 'L')
+    @ValidateIf((object) => object.status === 'LEAVE')
     @ValidateNested()
     leaveDetails: LeaveTypeDto;
 }
