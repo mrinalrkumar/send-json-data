@@ -28,7 +28,7 @@ export class CouchBaseAdapterService {
 
 
     //   return cluster.bucket('data-collection');
-    console.log(cluster)
+    // console.log(cluster)
     return cluster
     } catch (e) {
       console.log(e)
