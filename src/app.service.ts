@@ -119,45 +119,50 @@ export class AppService implements OnModuleInit {
     const query = `SELECT META().id as id, * FROM \`lead\` WHERE userId = $userId`;
     const options = { parameters: { userId: userInfoDto.userId } };
     const leadData: QueryResult = await this.bucket.scope('database').query(query, options)
-    console.log(leadData.rows)
-    const leadDataArray = leadData.rows.map(obj => obj.lead);
-    console.log(leadData.rows===null)
-    if(leadData.rows===null){
-      return DocumentNotFoundError
-    }
-    return leadDataArray
+    // console.log(leadData.rows)
+    return leadData.rows
+    // const leadDataArray = leadData.rows.map(obj => obj.lead);
+    // if(leadData.rows===null){
+    //   return DocumentNotFoundError
+    // }
+    // return leadDataArray
   }
 
   async getFileSummary(userInfoDto: UserInfoDto): Promise<any> {
-    const query = `SELECT * FROM \`file\` WHERE userId = $userId`;
+    const query = `SELECT META().id as id, * FROM \`file\` WHERE userId = $userId`;
     const options = { parameters: { userId: userInfoDto.userId } };
     const fileData: QueryResult = await this.bucket.scope('database').query(query, options)
-    const fileDataArray = fileData.rows.map(obj => obj.file);
-    return fileDataArray
+    // console.log(fileData)
+    return fileData.rows
+    // const fileDataArray = fileData.rows.map(obj => obj.file);
+    // return fileDataArray
   }
 
   async getSources(userInfoDto: UserInfoDto): Promise<any> {
-    const query = `SELECT * FROM \`source\` WHERE userId = $userId`;
+    const query = `SELECT META().id as id, * FROM \`source\` WHERE userId = $userId`;
     const options = { parameters: { userId: userInfoDto.userId } };
-    console.log(userInfoDto)
+    // console.log(userInfoDto)
     const sourceData: QueryResult = await this.bucket.scope('database').query(query, options)
-    const sourceDataArray = sourceData.rows.map(obj => obj.source);
-    return sourceDataArray
+    return sourceData.rows
+    // const sourceDataArray = sourceData.rows.map(obj => obj.source);
+    // return sourceDataArray
   }
 
   async getDisbSummary(userInfoDto: UserInfoDto): Promise<any> {
-    const query = `SELECT * FROM \`disbursment\` WHERE userId = $userId`;
+    const query = `SELECT META().id as id, * FROM \`disbursment\` WHERE userId = $userId`;
     const options = { parameters: { userId: userInfoDto.userId } };
     const disbData: QueryResult = await this.bucket.scope('database').query(query, options)
-    const disbDataArray = disbData.rows.map(obj => obj.disbursment);
-    return disbDataArray
+    return disbData.rows
+    // const disbDataArray = disbData.rows.map(obj => obj.disbursment);
+    // return disbDataArray
   }
 
   async getQuerySummary(userInfoDto: UserInfoDto): Promise<any> {
-    const query = `SELECT * FROM \`query\` WHERE userId = $userId`;
+    const query = `SELECT META().id as id, * FROM \`query\` WHERE userId = $userId`;
     const options = { parameters: { userId: userInfoDto.userId } };
     const queryData: QueryResult = await this.bucket.scope('database').query(query, options)
-    const queryDataArray = queryData.rows.map(obj => obj.query);
-    return queryDataArray
+    return queryData.rows
+    // const queryDataArray = queryData.rows.map(obj => obj.query);
+    // return queryDataArray
   }
 }
