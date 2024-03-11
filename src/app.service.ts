@@ -1,5 +1,5 @@
 /* eslint-disable prettier/prettier */
-import { Injectable, OnModuleInit } from '@nestjs/common';
+import { HttpStatus, Injectable, OnModuleInit } from '@nestjs/common';
 import { UserInfoDto } from './dto/user-info.dto';
 import { CouchBaseAdapterService } from './couch-base-adapter/couch-base-adapter.service';
 import {
@@ -106,6 +106,105 @@ export class AppService implements OnModuleInit {
     },
   ];
 
+  private readonly upcomingActivity = [
+    {
+      userId: '1234A',
+      activities: [
+        {
+          activityType: 'inPerson',
+          description: 'Collect docs',
+          createTime: '2024-03-10T06:12:39.880Z',
+          status: 'open',
+          geoLocation: {
+            latitude: 28.48877777777778,
+            longitude: 77.10308333333334,
+          },
+          planDateTime: '2024-03-11T16:12:39.880Z',
+        },
+        {
+          activityType: 'call',
+          description: 'salary',
+          createTime: '2024-03-10T06:12:39.880Z',
+          status: 'open',
+          planDateTime: '2024-03-11T15:12:39.880Z',
+        },
+        {
+          activityType: 'call',
+          description: 'salary',
+          createTime: '2024-03-09T06:12:39.880Z',
+          status: 'open',
+          planDateTime: '2024-03-10T15:12:39.880Z',
+        },
+        {
+          activityType: 'inPerson',
+          description: 'Collect docs',
+          createTime: '2024-03-08T06:12:39.880Z',
+          status: 'open',
+          geoLocation: {
+            latitude: 28.48877777777778,
+            longitude: 77.10308333333334,
+          },
+          planDateTime: '2024-03-09T16:12:39.880Z',
+        },
+        {
+          activityType: 'call',
+          description: 'salary',
+          createTime: '2024-03-08T06:12:39.880Z',
+          status: 'open',
+          planDateTime: '2024-03-09T15:12:39.880Z',
+        }
+      ],
+    },
+    {
+      userId: '1234M',
+      activities: [
+        {
+          activityType: 'inPerson',
+          description: 'Collect salary slip',
+          createTime: '2024-03-10T06:12:39.880Z',
+          status: 'open',
+          geoLocation: {
+            latitude: 28.48877777777778,
+            longitude: 77.10308333333334,
+          },
+          planDateTime: '2024-03-11T15:12:39.880Z',
+        },
+        {
+          activityType: 'call',
+          description: 'confirm details',
+          createTime: '2024-03-10T06:12:39.880Z',
+          status: 'open',
+          planDateTime: '2024-03-11T14:12:39.880Z',
+        },
+        {
+          activityType: 'call',
+          description: 'salary',
+          createTime: '2024-03-09T06:12:39.880Z',
+          status: 'open',
+          planDateTime: '2024-03-10T15:12:39.880Z',
+        },
+        {
+          activityType: 'inPerson',
+          description: 'Collect docs',
+          createTime: '2024-03-08T06:12:39.880Z',
+          status: 'open',
+          geoLocation: {
+            latitude: 28.48877777777778,
+            longitude: 77.10308333333334,
+          },
+          planDateTime: '2024-03-09T16:12:39.880Z',
+        },
+        {
+          activityType: 'call',
+          description: 'salary',
+          createTime: '2024-03-08T06:12:39.880Z',
+          status: 'open',
+          planDateTime: '2024-03-09T15:12:39.880Z',
+        }
+      ],
+    }
+  ];
+
   getHello(): DataItem[] {
     return this.data;
   }
@@ -115,6 +214,21 @@ export class AppService implements OnModuleInit {
       (item) => item.userId === userInfoDto.userId,
     );
     return filteredData;
+  }
+
+  async getUpcomingActivity(userInfoDto: UserInfoDto): Promise<any> {
+    const filteredDate = this.upcomingActivity.filter(
+      (item) => item.userId === userInfoDto.userId
+    )
+
+    return {
+      statusCode: HttpStatus.OK,
+      message: {
+        id: 'Success',
+        message: 'Data fetched successfully'
+      },
+      data: filteredDate[0]
+    }
   }
 
   async getAttendance(attendanceDto: AttendanceDto): Promise<any> {

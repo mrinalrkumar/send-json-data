@@ -52,4 +52,9 @@ export class AppController {
   async getDiarySummary(@Body() userInfoDto: UserInfoDto): Promise<any> {
     return this.appService.getDiarySummary(userInfoDto);
   }
+
+  @Post('upcomingActivity')
+  async getUpcomingActivity (@Body() userInfoDto: UserInfoDto): Promise<any> {
+    return this.appService.getUpcomingActivity(userInfoDto)
+  }
 }
