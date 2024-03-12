@@ -27,21 +27,21 @@ export class AttendanceDto {
     @IsEnum(AttendanceType)
     @IsNotEmpty()
     @IsDefined()
-    status: AttendanceType;
+    type: AttendanceType;
 
     @IsString()
-    @ValidateIf((object) => object.status === 'IN')
+    @ValidateIf((object) => object.type === 'IN')
     @IsNotEmpty()
     @IsDefined()
     inTime: string;
 
     @IsString()
-    @ValidateIf((object) => object.status === 'OUT')
+    @ValidateIf((object) => object.type === 'OUT')
     @IsNotEmpty()
     @IsDefined()
     outTime: string;
 
-    @ValidateIf((object) => object.status === 'LEAVE')
+    @ValidateIf((object) => object.type === 'LEAVE')
     @ValidateNested()
     leaveDetails: LeaveTypeDto;
 }
