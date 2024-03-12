@@ -44,7 +44,6 @@ export class AppController {
 
   @Post('attendance')
   async getAttendance(@Body() attendanceDto: AttendanceDto): Promise<any> {
-    console.log(attendanceDto)
     return this.appService.getAttendance(attendanceDto);
   }
 

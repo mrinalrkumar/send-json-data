@@ -17,7 +17,7 @@ class LeaveTypeDto {
 
     @IsString()
     @IsNotEmpty()
-    remark: string;
+    leaveType: string;
 }
 export class AttendanceDto {
     @IsString()
