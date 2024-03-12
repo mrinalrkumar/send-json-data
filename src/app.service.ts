@@ -152,7 +152,7 @@ export class AppService implements OnModuleInit {
           createTime: '2024-03-08T06:12:39.880Z',
           status: 'open',
           planDateTime: '2024-03-09T15:12:39.880Z',
-        }
+        },
       ],
     },
     {
@@ -200,9 +200,9 @@ export class AppService implements OnModuleInit {
           createTime: '2024-03-08T06:12:39.880Z',
           status: 'open',
           planDateTime: '2024-03-09T15:12:39.880Z',
-        }
+        },
       ],
-    }
+    },
   ];
 
   getHello(): DataItem[] {
@@ -218,21 +218,51 @@ export class AppService implements OnModuleInit {
 
   async getUpcomingActivity(userInfoDto: UserInfoDto): Promise<any> {
     const filteredDate = this.upcomingActivity.filter(
-      (item) => item.userId === userInfoDto.userId
-    )
+      (item) => item.userId === userInfoDto.userId,
+    );
 
     return {
       statusCode: HttpStatus.OK,
       message: {
         id: 'Success',
-        message: 'Data fetched successfully'
+        message: 'Data fetched successfully',
       },
-      data: filteredDate[0]
-    }
+      data: filteredDate[0],
+    };
   }
 
   async getAttendance(attendanceDto: AttendanceDto): Promise<any> {
-    return true;
+    if (attendanceDto.type === 'IN') {
+      const combinedDateTime = dayjs(
+        dayjs().format('YYYY-MM-DD') + ' ' + '04:53:21.258Z',
+      );
+      return {
+        statusCode: HttpStatus.OK,
+        message: {
+          id: 'Success',
+          message: 'Attendance in time updated',
+        },
+        data: combinedDateTime.toISOString(),
+      };
+    } else if (attendanceDto.type === 'OUT') {
+      return {
+        statusCode: HttpStatus.OK,
+        message: {
+          id: 'Success',
+          message: 'Attendance out time updated',
+        },
+        data: dayjs(),
+      };
+    } else {
+      return {
+        statusCode: HttpStatus.OK,
+        message: {
+          id: 'Success',
+          message: 'Leave updated'
+        },
+        data: "Leave applied"
+      }
+    }
   }
 
   async getLeadSummary(userInfoDto: UserInfoDto): Promise<any> {
