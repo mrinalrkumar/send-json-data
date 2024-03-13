@@ -91,6 +91,12 @@ export class AppService implements OnModuleInit {
           missed: '5',
           achieved: '8',
         },
+        activityType7: {
+          //prospect
+          id: 'activityType7',
+          missed: '5',
+          achieved: '4',
+        },
         upcomigActivity: {
           time: '07/03/2024',
         },
@@ -100,32 +106,44 @@ export class AppService implements OnModuleInit {
       userId: '1234M',
       date: dayjs(),
       activityType1: {
+        //lead
         id: 'activityType1',
         missed: '5',
         achieved: '7',
       },
       activityType2: {
+        //file
         id: 'activityType2',
         missed: '4',
         achieved: '7',
       },
       activityType3: {
+        //disb
         id: 'activityType3',
         missed: '1',
         achieved: '7',
       },
       activityType4: {
+        //query
         id: 'activityType4',
         missed: '5',
         achieved: '8',
       },
       activityType5: {
+        //goal
         id: 'activityType5',
         missed: '8',
         achieved: '8',
       },
       activityType6: {
+        //source
         id: 'activityType6',
+        missed: '5',
+        achieved: '4',
+      },
+      activityType7: {
+        //prospect
+        id: 'activityType7',
         missed: '5',
         achieved: '4',
       },
@@ -140,98 +158,123 @@ export class AppService implements OnModuleInit {
       userId: '1234A',
       activities: [
         {
-          activityType: 'inPerson',
-          description: 'Collect docs',
-          createTime: '2024-03-10T06:12:39.880Z',
-          status: 'open',
-          geoLocation: {
-            latitude: 28.48877777777778,
-            longitude: 77.10308333333334,
-          },
-          planDateTime: '2024-03-11T16:12:39.880Z',
+          date: '2024-03-11T16:12:39.880Z',
+          activity: [
+            {
+              activityTypeId: 'activityType1',
+              activityTypeIdRef: 'QWE123',
+              activityType: 'inPerson',
+              description: 'Collect docs',
+              createTime: '2024-03-10T06:12:39.880Z',
+              status: 'open',
+              geoLocation: {
+                latitude: 28.48877777777778,
+                longitude: 77.10308333333334,
+              },
+              planDateTime: '2024-03-11T16:12:39.880Z',
+            },
+            {
+              activityTypeId: 'activityType2',
+              activityTypeIdRef: 'QWE124',
+              activityType: 'call',
+              description: 'salary',
+              createTime: '2024-03-10T06:12:39.880Z',
+              status: 'open',
+              planDateTime: '2024-03-11T15:12:39.880Z',
+            },
+          ],
         },
         {
-          activityType: 'call',
-          description: 'salary',
-          createTime: '2024-03-10T06:12:39.880Z',
-          status: 'open',
-          planDateTime: '2024-03-11T15:12:39.880Z',
+          date: '2024-03-10T16:12:39.880Z',
+          activity: [
+            {
+              activityTypeId: 'activityType3',
+              activityTypeIdRef: 'QWE125',
+              activityType: 'call',
+              description: 'salary',
+              createTime: '2024-03-09T06:12:39.880Z',
+              status: 'open',
+              planDateTime: '2024-03-10T15:12:39.880Z',
+            },
+          ],
         },
         {
-          activityType: 'call',
-          description: 'salary',
-          createTime: '2024-03-09T06:12:39.880Z',
-          status: 'open',
-          planDateTime: '2024-03-10T15:12:39.880Z',
-        },
-        {
-          activityType: 'inPerson',
-          description: 'Collect docs',
-          createTime: '2024-03-08T06:12:39.880Z',
-          status: 'open',
-          geoLocation: {
-            latitude: 28.48877777777778,
-            longitude: 77.10308333333334,
-          },
-          planDateTime: '2024-03-09T16:12:39.880Z',
-        },
-        {
-          activityType: 'call',
-          description: 'salary',
-          createTime: '2024-03-08T06:12:39.880Z',
-          status: 'open',
-          planDateTime: '2024-03-09T15:12:39.880Z',
+          date: '2024-03-09T16:12:39.880Z',
+          activity: [
+            {
+              activityTypeId: 'activityType2',
+              activityTypeIdRef: 'QWE121',
+              activityType: 'inPerson',
+              description: 'Collect docs',
+              createTime: '2024-03-08T06:12:39.880Z',
+              status: 'open',
+              geoLocation: {
+                latitude: 28.48877777777778,
+                longitude: 77.10308333333334,
+              },
+              planDateTime: '2024-03-09T16:12:39.880Z',
+            },
+            {
+              activityTypeId: 'activityType2',
+              activityTypeIdRef: 'QWE127',
+              activityType: 'call',
+              description: 'salary',
+              createTime: '2024-03-08T06:12:39.880Z',
+              status: 'open',
+              planDateTime: '2024-03-09T15:12:39.880Z',
+            },
+          ],
         },
       ],
     },
-    {
-      userId: '1234M',
-      activities: [
-        {
-          activityType: 'inPerson',
-          description: 'Collect salary slip',
-          createTime: '2024-03-10T06:12:39.880Z',
-          status: 'open',
-          geoLocation: {
-            latitude: 28.48877777777778,
-            longitude: 77.10308333333334,
-          },
-          planDateTime: '2024-03-11T15:12:39.880Z',
-        },
-        {
-          activityType: 'call',
-          description: 'confirm details',
-          createTime: '2024-03-10T06:12:39.880Z',
-          status: 'open',
-          planDateTime: '2024-03-11T14:12:39.880Z',
-        },
-        {
-          activityType: 'call',
-          description: 'salary',
-          createTime: '2024-03-09T06:12:39.880Z',
-          status: 'open',
-          planDateTime: '2024-03-10T15:12:39.880Z',
-        },
-        {
-          activityType: 'inPerson',
-          description: 'Collect docs',
-          createTime: '2024-03-08T06:12:39.880Z',
-          status: 'open',
-          geoLocation: {
-            latitude: 28.48877777777778,
-            longitude: 77.10308333333334,
-          },
-          planDateTime: '2024-03-09T16:12:39.880Z',
-        },
-        {
-          activityType: 'call',
-          description: 'salary',
-          createTime: '2024-03-08T06:12:39.880Z',
-          status: 'open',
-          planDateTime: '2024-03-09T15:12:39.880Z',
-        },
-      ],
-    },
+    // {
+    //   userId: '1234M',
+    //   activities: [
+    //     {
+    //       activityType: 'inPerson',
+    //       description: 'Collect salary slip',
+    //       createTime: '2024-03-10T06:12:39.880Z',
+    //       status: 'open',
+    //       geoLocation: {
+    //         latitude: 28.48877777777778,
+    //         longitude: 77.10308333333334,
+    //       },
+    //       planDateTime: '2024-03-11T15:12:39.880Z',
+    //     },
+    //     {
+    //       activityType: 'call',
+    //       description: 'confirm details',
+    //       createTime: '2024-03-10T06:12:39.880Z',
+    //       status: 'open',
+    //       planDateTime: '2024-03-11T14:12:39.880Z',
+    //     },
+    //     {
+    //       activityType: 'call',
+    //       description: 'salary',
+    //       createTime: '2024-03-09T06:12:39.880Z',
+    //       status: 'open',
+    //       planDateTime: '2024-03-10T15:12:39.880Z',
+    //     },
+    //     {
+    //       activityType: 'inPerson',
+    //       description: 'Collect docs',
+    //       createTime: '2024-03-08T06:12:39.880Z',
+    //       status: 'open',
+    //       geoLocation: {
+    //         latitude: 28.48877777777778,
+    //         longitude: 77.10308333333334,
+    //       },
+    //       planDateTime: '2024-03-09T16:12:39.880Z',
+    //     },
+    //     {
+    //       activityType: 'call',
+    //       description: 'salary',
+    //       createTime: '2024-03-08T06:12:39.880Z',
+    //       status: 'open',
+    //       planDateTime: '2024-03-09T15:12:39.880Z',
+    //     },
+    //   ],
+    // },
   ];
 
   getHello(): DataItem[] {
