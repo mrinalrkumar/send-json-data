@@ -44,71 +44,88 @@ export class AppService implements OnModuleInit {
   private readonly diarySummary = [
     {
       userId: '1234A',
-      date: dayjs(),
-      activityType1: {
-        id: "activityType1",
-        missed: '5',
-        achieved: '7',
+      date: dayjs(), //today's date
+      huddleSummary: {
+        huddleId: 'huddleBriefTitle',
+        huddleCollection: [
+          {
+            title: 'Huddle1',
+            date: dayjs(),
+            desc: 'desc1',
+          },
+          {
+            title: 'Huddle2',
+            date: dayjs().subtract(1, 'day'),
+            desc: 'desc2',
+          },
+        ],
       },
-      activityType2: {
-        id: "activityType2",
-        missed: '4',
-        achieved: '7',
-      },
-      activityType3: {
-        id: "activityType3",
-        missed: '1',
-        achieved: '7',
-      },
-      activityType4: {
-        id: "activityType4",
-        missed: '5',
-        achieved: '8',
-      },
-      activityType5: {
-        id: "activityType5",
-        missed: '5',
-        achieved: '8',
-      },
-      activityType6: {
-        id: "activityType6",
-        missed: '5',
-        achieved: '8',
-      },
-      upcomigActivity: {
-        time: '07/03/2024',
+      activitySummary: {
+        activityType1: {
+          id: 'activityType1',
+          missed: '5',
+          achieved: '7',
+        },
+        activityType2: {
+          id: 'activityType2',
+          missed: '4',
+          achieved: '7',
+        },
+        activityType3: {
+          id: 'activityType3',
+          missed: '1',
+          achieved: '7',
+        },
+        activityType4: {
+          id: 'activityType4',
+          missed: '5',
+          achieved: '8',
+        },
+        activityType5: {
+          id: 'activityType5',
+          missed: '5',
+          achieved: '8',
+        },
+        activityType6: {
+          id: 'activityType6',
+          missed: '5',
+          achieved: '8',
+        },
+        upcomigActivity: {
+          time: '07/03/2024',
+        },
       },
     },
     {
       userId: '1234M',
       date: dayjs(),
       activityType1: {
-        id: "activityType1",
+        id: 'activityType1',
         missed: '5',
         achieved: '7',
       },
       activityType2: {
-        id: "activityType2",
+        id: 'activityType2',
         missed: '4',
         achieved: '7',
       },
       activityType3: {
-        id: "activityType3",
+        id: 'activityType3',
         missed: '1',
         achieved: '7',
       },
       activityType4: {
-        id: "activityType4",
+        id: 'activityType4',
         missed: '5',
         achieved: '8',
       },
       activityType5: {
-        id: "activityType5",
+        id: 'activityType5',
         missed: '8',
         achieved: '8',
       },
       activityType6: {
-        id: "activityType6",
+        id: 'activityType6',
         missed: '5',
         achieved: '4',
       },
@@ -270,10 +287,10 @@ export class AppService implements OnModuleInit {
         statusCode: HttpStatus.OK,
         message: {
           id: 'Success',
-          message: 'Leave updated'
+          message: 'Leave updated',
         },
-        data: "Leave applied"
-      }
+        data: 'Leave applied',
+      };
     }
   }
 
