@@ -38,34 +38,40 @@ export class AppService implements OnModuleInit {
     { id: 7, text: 'PENDING QUERY', value: 446 },
     { id: 8, text: 'PRE RHDFC', value: 0 },
     { id: 9, text: 'PRE SANCTION', value: 521 },
-    { id: 10, text: 'SANCTION', value: 0 },
+    { id: 0, text: 'SANCTION', value: 0 },
   ];
 
   private readonly diarySummary = [
     {
       userId: '1234A',
       date: dayjs(),
-      lead: {
+      activityType1: {
+        id: "activityType1",
         missed: '5',
         achieved: '7',
       },
-      file: {
+      activityType2: {
+        id: "activityType2",
         missed: '4',
         achieved: '7',
       },
-      disb: {
+      activityType3: {
+        id: "activityType3",
         missed: '1',
         achieved: '7',
       },
-      query: {
+      activityType4: {
+        id: "activityType4",
         missed: '5',
         achieved: '8',
       },
-      source: {
+      activityType5: {
+        id: "activityType5",
         missed: '5',
         achieved: '8',
       },
-      goal: {
+      activityType6: {
+        id: "activityType6",
         missed: '5',
         achieved: '8',
       },
@@ -76,27 +82,33 @@ export class AppService implements OnModuleInit {
     {
       userId: '1234M',
       date: dayjs(),
-      lead: {
+      activityType1: {
+        id: "activityType1",
         missed: '5',
         achieved: '7',
       },
-      file: {
+      activityType2: {
+        id: "activityType2",
         missed: '4',
         achieved: '7',
       },
-      disb: {
+      activityType3: {
+        id: "activityType3",
         missed: '1',
         achieved: '7',
       },
-      query: {
+      activityType4: {
+        id: "activityType4",
         missed: '5',
         achieved: '8',
       },
-      source: {
+      activityType5: {
+        id: "activityType5",
         missed: '8',
         achieved: '8',
       },
-      goal: {
+      activityType6: {
+        id: "activityType6",
         missed: '5',
         achieved: '4',
       },
