@@ -1,6 +1,6 @@
 import { Body, Controller, Get, Post } from '@nestjs/common';
 import { AppService } from './app.service';
-import { UserInfoDto } from './dto/user-info.dto';
+import { IdDto, UserInfoDto } from './dto/user-info.dto';
 import { AttendanceDto } from './dto/attendance-info.dto';
 
 interface DataItem {
@@ -20,6 +20,11 @@ export class AppController {
   @Post('leadSummary')
   async getLeadSummary(@Body() userInfoDto: UserInfoDto): Promise<any> {
     return this.appService.getLeadSummary(userInfoDto);
+  }
+
+  @Post('leadSummary/id')
+  async getLeadSummaryData(@Body() idDto: IdDto): Promise<any> {
+    return this.appService.getLeadSummaryData(idDto);
   }
 
   @Post('fileSummary')

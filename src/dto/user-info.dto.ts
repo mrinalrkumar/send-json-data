@@ -6,6 +6,12 @@ export class UserInfoDto {
   userId: string;
 }
 
+export class IdDto {
+  @IsString()
+  @IsNotEmpty()
+  id: string;
+}
+
 enum DiarySummaryType {
   HL = 'HL',
   PL = 'PL',

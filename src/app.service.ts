@@ -1,6 +1,6 @@
 /* eslint-disable prettier/prettier */
 import { HttpStatus, Injectable, OnModuleInit } from '@nestjs/common';
-import { UserInfoDto } from './dto/user-info.dto';
+import { IdDto, UserInfoDto } from './dto/user-info.dto';
 import { CouchBaseAdapterService } from './couch-base-adapter/couch-base-adapter.service';
 import {
   Bucket,
@@ -475,5 +475,93 @@ export class AppService implements OnModuleInit {
     return transformedData;
     // const queryDataArray = queryData.rows.map(obj => obj.query);
     // return queryDataArray
+  }
+
+  private readonly leadSummaryData = [
+    {
+      id: '1',
+      leadName: 'John',
+      leadEmployment: 'Salaried',
+      leadStatus: 'new',
+      leadNo: '1231231',
+      leadDate: '2024-11-11T11.11.11Z',
+      leadQuality: 'ABC',
+      OnlineApplicationStatus: 'Sent to HDFC',
+      leadDetails: {
+        leadStatusDetails: {
+          leadFollowUp: 'closed',
+          leadReason: 'sys_aconv',
+          leadDedupeStatus: 'converted',
+        },
+        personalDetails: {
+          name: 'John',
+          mobileNo: '8918912242',
+          emailId: 'abce@gasd.com',
+          employmentType: 'employed',
+          totalMonthlyIncome: 'Rs.150000',
+          cityOfContact: 'Mumbai',
+          customerAddress: 'Colaba, Mumbai',
+          incomeRange: 'below Rs. 20 Lakhs',
+          incomeBased: 'ITR',
+          incomeBasedBalue: '0',
+        },
+        loanDetails: {
+          loanType: 'NEW',
+          loanAmount: '99880',
+          propertySelected: 'NO',
+          location: 'Worli',
+          monthlyEmi: '30000',
+        },
+        sourceDetails: {
+          sourceType: 'associate',
+          subSource: 'Physical associate',
+          termSource: 'assocaite_cd',
+          bsa: 'a0064-aayush nai k',
+          archivioSource: 'Kr',
+          hdfcReach: 'no',
+          residentType: 'nri',
+          originBranch: '201-Mumbai Western',
+          originPlace: 'and-andheri-e',
+          sourcePlace: 'BKC',
+          subventionFees: '100',
+          salesExecutive: '33692-ravi dutt pathak',
+          promoCode: '',
+          campaignSelection: 'No',
+          meetingMode: 'call',
+          meetingDateTime: '2024-03-06T11.11.11Z',
+        },
+        otherInfo: {
+          lmsCalling: 'N',
+          expectedFollowUpDate: '2024-11-11',
+        },
+        spotOffer: {
+          provided: 'No',
+        },
+      },
+      leadActivity: {
+        activity: 'No',
+      },
+      leadApplication: {
+        newApplicationStarted: true,
+        personalInfo: true,
+        propertyInfo: false,
+        financialInfo: true,
+        applicationReview: true,
+      },
+    },
+  ];
+
+  async getLeadSummaryData(idDto: IdDto): Promise<any> {
+    const filteredData = this.leadSummaryData.filter(
+      (item) => item.id === idDto.id,
+    );
+    return {
+      statusCode: HttpStatus.OK,
+      message: {
+        id: 'Success',
+        desc: 'Data fetched'
+      },
+      data: filteredData[0]
+    }
   }
 }
