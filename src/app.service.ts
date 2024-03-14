@@ -547,10 +547,13 @@ export class AppService implements OnModuleInit {
         propertyInfo: false,
         financialInfo: true,
         applicationReview: true,
+        customerConsent: true,
+        feePaymentPending: true,
+        submitToHdfc: false,
       },
       leadDoc: {
-        doc: null
-      }
+        doc: null,
+      },
     },
   ];
 
@@ -562,9 +565,9 @@ export class AppService implements OnModuleInit {
       statusCode: HttpStatus.OK,
       message: {
         id: 'Success',
-        desc: 'Data fetched'
+        desc: 'Data fetched',
       },
-      data: filteredData[0]
-    }
+      data: filteredData[0],
+    };
   }
 }
