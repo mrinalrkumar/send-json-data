@@ -548,6 +548,9 @@ export class AppService implements OnModuleInit {
         financialInfo: true,
         applicationReview: true,
       },
+      leadDoc: {
+        doc: null
+      }
     },
   ];
 
