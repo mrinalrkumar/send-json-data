@@ -2,6 +2,7 @@ import { Body, Controller, Get, Post } from '@nestjs/common';
 import { AppService } from './app.service';
 import { IdDto, UserInfoDto } from './dto/user-info.dto';
 import { AttendanceDto } from './dto/attendance-info.dto';
+import { LeadDto } from './dto/lead.dto';
 
 interface DataItem {
   id: number;
@@ -20,6 +21,11 @@ export class AppController {
   @Post('leadSummary')
   async getLeadSummary(@Body() userInfoDto: UserInfoDto): Promise<any> {
     return this.appService.getLeadSummary(userInfoDto);
+  }
+
+  @Post('lead')
+  async modifyLead(@Body() leadDto: LeadDto): Promise<any> {
+    return this.appService.modifyLead(leadDto);
   }
 
   @Post('leadSummary/id')

@@ -11,6 +11,7 @@ import {
 } from 'couchbase';
 import { AttendanceDto } from './dto/attendance-info.dto';
 import * as dayjs from 'dayjs';
+import { LeadDto } from './dto/lead.dto';
 interface DataItem {
   id: number;
   text: string;
@@ -286,6 +287,24 @@ export class AppService implements OnModuleInit {
       (item) => item.userId === userInfoDto.userId,
     );
     return filteredData;
+  }
+
+  async modifyLead(leadDto: LeadDto): Promise<any> {
+    if (leadDto.type === 'EDIT') {
+      return {
+        statusCode: HttpStatus.OK,
+        message: {
+          id: 'Success',
+          desc: 'Lead Updated Successfully',
+        },
+        data: {
+          result: 'Lead updated for the given data',
+        },
+      };
+    }
+    else {
+      return "lead created"
+    }
   }
 
   async getUpcomingActivity(userInfoDto: UserInfoDto): Promise<any> {
