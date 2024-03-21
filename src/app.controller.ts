@@ -3,6 +3,7 @@ import { AppService } from './app.service';
 import { IdDto, UserInfoDto } from './dto/user-info.dto';
 import { AttendanceDto } from './dto/attendance-info.dto';
 import { LeadDto } from './dto/lead.dto';
+import { CreateLeadDto } from './dto/create-lead.dto';
 
 interface DataItem {
   id: number;
@@ -66,5 +67,10 @@ export class AppController {
   @Post('upcomingActivity')
   async getUpcomingActivity (@Body() userInfoDto: UserInfoDto): Promise<any> {
     return this.appService.getUpcomingActivity(userInfoDto)
+  }
+
+  @Post('createLead')
+  async createLead (@Body() createLeadDto: CreateLeadDto): Promise<any> {
+    return this.appService.createLead(createLeadDto)
   }
 }

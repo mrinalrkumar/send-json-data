@@ -12,6 +12,7 @@ import {
 import { AttendanceDto } from './dto/attendance-info.dto';
 import * as dayjs from 'dayjs';
 import { LeadDto } from './dto/lead.dto';
+import { CreateLeadDto } from './dto/create-lead.dto';
 interface DataItem {
   id: number;
   text: string;
@@ -587,6 +588,17 @@ export class AppService implements OnModuleInit {
         desc: 'Data fetched',
       },
       data: filteredData[0],
+    };
+  }
+
+  async createLead(createLeadDto: CreateLeadDto): Promise<any> {
+    return {
+      statusCode: HttpStatus.OK,
+      message: {
+        id: 'Success',
+        desc: 'Lead Created',
+      },
+      data: "Lead create successfully",
     };
   }
 }
