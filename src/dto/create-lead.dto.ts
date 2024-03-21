@@ -154,6 +154,10 @@ class SourceDetails {
     @IsEnum(ArchivioSource)
     archivioSubSource: ArchivioSource;
 
+    @ValidateIf((object) => object.archivioSource === true)
+    @IsDefined()
+    archivioSourceName: string;
+
     @IsBoolean()
     bankreach: boolean;
 
