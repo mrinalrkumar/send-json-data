@@ -412,6 +412,7 @@ export class AppService implements OnModuleInit {
           date: dayjs().toISOString(),
           activity: [
             {
+              id: 1,
               activityTypeId: 'activityType1',
               activityTypeIdRef: 'QWE123',
               activityType: 'inPerson',
@@ -426,6 +427,7 @@ export class AppService implements OnModuleInit {
               endPlanDateTime: dayjs().add(1, 'day').toISOString(),
             },
             {
+              id: 2,
               activityTypeId: 'activityType2',
               activityTypeIdRef: 'QWE124',
               activityType: 'call',
@@ -441,6 +443,7 @@ export class AppService implements OnModuleInit {
           date: dayjs().add(1, 'day').toISOString(),
           activity: [
             {
+              id: 3,
               activityTypeId: 'activityType3',
               activityTypeIdRef: 'QWE125',
               activityType: 'call',
@@ -456,6 +459,7 @@ export class AppService implements OnModuleInit {
           date: dayjs().add(2, 'day').toISOString(),
           activity: [
             {
+              id: 4,
               activityTypeId: 'activityType2',
               activityTypeIdRef: 'QWE121',
               activityType: 'inPerson',
@@ -470,6 +474,7 @@ export class AppService implements OnModuleInit {
               endPlanDateTime: dayjs().add(3, 'day').toISOString(),
             },
             {
+              id: 5,
               activityTypeId: 'activityType2',
               activityTypeIdRef: 'QWE127',
               activityType: 'call',
