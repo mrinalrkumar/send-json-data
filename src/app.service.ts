@@ -409,7 +409,7 @@ export class AppService implements OnModuleInit {
       userId: '1234A',
       activities: [
         {
-          date: '2024-03-11T16:12:39.880Z',
+          date: dayjs().toISOString(),
           activity: [
             {
               activityTypeId: 'activityType1',
@@ -422,7 +422,8 @@ export class AppService implements OnModuleInit {
                 latitude: 28.48877777777778,
                 longitude: 77.10308333333334,
               },
-              planDateTime: '2024-03-11T16:12:39.880Z',
+              planDateTime: dayjs().toISOString(),
+              endPlanDateTime: dayjs().add(1, 'day').toISOString(),
             },
             {
               activityTypeId: 'activityType2',
@@ -431,12 +432,13 @@ export class AppService implements OnModuleInit {
               description: 'salary',
               createTime: '2024-03-10T06:12:39.880Z',
               status: 'open',
-              planDateTime: '2024-03-11T15:12:39.880Z',
+              pplanDateTime: dayjs().toISOString(),
+              endPlanDateTime: dayjs().add(1, 'day').toISOString(),
             },
           ],
         },
         {
-          date: '2024-03-10T16:12:39.880Z',
+          date: dayjs().add(1, 'day').toISOString(),
           activity: [
             {
               activityTypeId: 'activityType3',
@@ -445,12 +447,13 @@ export class AppService implements OnModuleInit {
               description: 'salary',
               createTime: '2024-03-09T06:12:39.880Z',
               status: 'open',
-              planDateTime: '2024-03-10T15:12:39.880Z',
+              planDateTime: dayjs().add(1, 'day').toISOString(),
+              endPlanDateTime: dayjs().add(2, 'day').toISOString(),
             },
           ],
         },
         {
-          date: '2024-03-09T16:12:39.880Z',
+          date: dayjs().add(2, 'day').toISOString(),
           activity: [
             {
               activityTypeId: 'activityType2',
@@ -463,7 +466,8 @@ export class AppService implements OnModuleInit {
                 latitude: 28.48877777777778,
                 longitude: 77.10308333333334,
               },
-              planDateTime: '2024-03-09T16:12:39.880Z',
+              planDateTime: dayjs().add(2, 'day').toISOString(),
+              endPlanDateTime: dayjs().add(3, 'day').toISOString(),
             },
             {
               activityTypeId: 'activityType2',
@@ -472,7 +476,8 @@ export class AppService implements OnModuleInit {
               description: 'salary',
               createTime: '2024-03-08T06:12:39.880Z',
               status: 'open',
-              planDateTime: '2024-03-09T15:12:39.880Z',
+              planDateTime: dayjs().add(2, 'day').toISOString(),
+              endPlanDateTime: dayjs().add(3, 'day').toISOString(),
             },
           ],
         },
