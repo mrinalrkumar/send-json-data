@@ -1,6 +1,6 @@
 import { Body, Controller, Get, Post } from '@nestjs/common';
 import { AppService } from './app.service';
-import { IdDto, UserInfoDto } from './dto/user-info.dto';
+import { DiarySummaryDTO, IdDto, UserInfoDto } from './dto/user-info.dto';
 import { AttendanceDto } from './dto/attendance-info.dto';
 import { LeadDto } from './dto/lead.dto';
 import { CreateLeadDto } from './dto/create-lead.dto';
@@ -60,8 +60,8 @@ export class AppController {
   }
 
   @Post('diarySummary')
-  async getDiarySummary(@Body() userInfoDto: UserInfoDto): Promise<any> {
-    return this.appService.getDiarySummary(userInfoDto);
+  async getDiarySummary(@Body() diarySummaryDTO: DiarySummaryDTO): Promise<any> {
+    return this.appService.getDiarySummary(diarySummaryDTO);
   }
 
   @Post('upcomingActivity')

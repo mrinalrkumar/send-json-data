@@ -1,6 +1,6 @@
 /* eslint-disable prettier/prettier */
 import { HttpStatus, Injectable, OnModuleInit } from '@nestjs/common';
-import { IdDto, UserInfoDto } from './dto/user-info.dto';
+import { DiarySummaryDTO, IdDto, UserInfoDto } from './dto/user-info.dto';
 import { CouchBaseAdapterService } from './couch-base-adapter/couch-base-adapter.service';
 import {
   Bucket,
@@ -13,6 +13,7 @@ import { AttendanceDto } from './dto/attendance-info.dto';
 import * as dayjs from 'dayjs';
 import { LeadDto } from './dto/lead.dto';
 import { CreateLeadDto } from './dto/create-lead.dto';
+import { start } from 'repl';
 interface DataItem {
   id: number;
   text: string;
@@ -52,13 +53,7 @@ export class AppService implements OnModuleInit {
         huddleCollection: [
           {
             title: 'Huddle1',
-            date: dayjs(),
             desc: 'desc1',
-          },
-          {
-            title: 'Huddle2',
-            date: dayjs().subtract(1, 'day'),
-            desc: 'desc2',
           },
         ],
       },
@@ -99,58 +94,312 @@ export class AppService implements OnModuleInit {
           missed: '5',
           achieved: '4',
         },
-        upcomigActivity: {
-          time: '07/03/2024',
+      },
+    },
+    {
+      userId: '1234A',
+      date: dayjs().subtract(1, 'day'), //today's date
+      huddleSummary: {
+        huddleId: 'huddleBriefTitle',
+        huddleCollection: [
+          {
+            title: 'Huddle2',
+            desc: 'desc2',
+          },
+        ],
+      },
+      activitySummary: {
+        activityType1: {
+          id: 'activityType1',
+          missed: '1',
+          achieved: '7',
+        },
+        activityType2: {
+          id: 'activityType2',
+          missed: '2',
+          achieved: '7',
+        },
+        activityType3: {
+          id: 'activityType3',
+          missed: '6',
+          achieved: '7',
+        },
+        activityType4: {
+          id: 'activityType4',
+          missed: '5',
+          achieved: '2',
+        },
+        activityType5: {
+          id: 'activityType5',
+          missed: '4',
+          achieved: '8',
+        },
+        activityType6: {
+          id: 'activityType6',
+          missed: '5',
+          achieved: '6',
+        },
+        activityType7: {
+          //prospect
+          id: 'activityType7',
+          missed: '5',
+          achieved: '3',
         },
       },
     },
     {
-      userId: '1234M',
-      date: dayjs(),
-      activityType1: {
-        //lead
-        id: 'activityType1',
-        missed: '5',
-        achieved: '7',
+      userId: '1234A',
+      date: dayjs().subtract(2, 'day'), //today's date
+      huddleSummary: {
+        huddleId: 'huddleBriefTitle',
+        huddleCollection: [
+          {
+            title: 'Huddle3',
+            desc: 'desc3',
+          },
+        ],
       },
-      activityType2: {
-        //file
-        id: 'activityType2',
-        missed: '4',
-        achieved: '7',
+      activitySummary: {
+        activityType1: {
+          id: 'activityType1',
+          missed: '1',
+          achieved: '7',
+        },
+        activityType2: {
+          id: 'activityType2',
+          missed: '5',
+          achieved: '7',
+        },
+        activityType3: {
+          id: 'activityType3',
+          missed: '5',
+          achieved: '7',
+        },
+        activityType4: {
+          id: 'activityType4',
+          missed: '5',
+          achieved: '6',
+        },
+        activityType5: {
+          id: 'activityType5',
+          missed: '5',
+          achieved: '8',
+        },
+        activityType6: {
+          id: 'activityType6',
+          missed: '5',
+          achieved: '8',
+        },
+        activityType7: {
+          //prospect
+          id: 'activityType7',
+          missed: '5',
+          achieved: '4',
+        },
       },
-      activityType3: {
-        //disb
-        id: 'activityType3',
-        missed: '1',
-        achieved: '7',
+    },
+    {
+      userId: '1234A',
+      date: dayjs().subtract(3, 'day'), //today's date
+      huddleSummary: {
+        huddleId: 'huddleBriefTitle',
+        huddleCollection: [
+          {
+            title: 'Huddle4',
+            desc: 'desc4',
+          },
+        ],
       },
-      activityType4: {
-        //query
-        id: 'activityType4',
-        missed: '5',
-        achieved: '8',
+      activitySummary: {
+        activityType1: {
+          id: 'activityType1',
+          missed: '5',
+          achieved: '7',
+        },
+        activityType2: {
+          id: 'activityType2',
+          missed: '4',
+          achieved: '7',
+        },
+        activityType3: {
+          id: 'activityType3',
+          missed: '1',
+          achieved: '7',
+        },
+        activityType4: {
+          id: 'activityType4',
+          missed: '5',
+          achieved: '8',
+        },
+        activityType5: {
+          id: 'activityType5',
+          missed: '5',
+          achieved: '8',
+        },
+        activityType6: {
+          id: 'activityType6',
+          missed: '5',
+          achieved: '8',
+        },
+        activityType7: {
+          //prospect
+          id: 'activityType7',
+          missed: '5',
+          achieved: '4',
+        },
       },
-      activityType5: {
-        //goal
-        id: 'activityType5',
-        missed: '8',
-        achieved: '8',
+    },
+    {
+      userId: '1234A',
+      date: dayjs().subtract(4, 'day'), //today's date
+      huddleSummary: {
+        huddleId: 'huddleBriefTitle',
+        huddleCollection: [
+          {
+            title: 'Huddle5',
+            desc: 'desc5',
+          },
+        ],
       },
-      activityType6: {
-        //source
-        id: 'activityType6',
-        missed: '5',
-        achieved: '4',
+      activitySummary: {
+        activityType1: {
+          id: 'activityType1',
+          missed: '5',
+          achieved: '2',
+        },
+        activityType2: {
+          id: 'activityType2',
+          missed: '4',
+          achieved: '5',
+        },
+        activityType3: {
+          id: 'activityType3',
+          missed: '1',
+          achieved: '3',
+        },
+        activityType4: {
+          id: 'activityType4',
+          missed: '5',
+          achieved: '1',
+        },
+        activityType5: {
+          id: 'activityType5',
+          missed: '5',
+          achieved: '8',
+        },
+        activityType6: {
+          id: 'activityType6',
+          missed: '5',
+          achieved: '8',
+        },
+        activityType7: {
+          //prospect
+          id: 'activityType7',
+          missed: '5',
+          achieved: '4',
+        },
       },
-      activityType7: {
-        //prospect
-        id: 'activityType7',
-        missed: '5',
-        achieved: '4',
+    },
+    {
+      userId: '1234A',
+      date: dayjs().subtract(5, 'day'), //today's date
+      huddleSummary: {
+        huddleId: 'huddleBriefTitle',
+        huddleCollection: [
+          {
+            title: 'Huddle6',
+            desc: 'desc6',
+          },
+        ],
       },
-      upcomigActivity: {
-        time: '07/03/2024',
+      activitySummary: {
+        activityType1: {
+          id: 'activityType1',
+          missed: '5',
+          achieved: '2',
+        },
+        activityType2: {
+          id: 'activityType2',
+          missed: '4',
+          achieved: '3',
+        },
+        activityType3: {
+          id: 'activityType3',
+          missed: '1',
+          achieved: '4',
+        },
+        activityType4: {
+          id: 'activityType4',
+          missed: '5',
+          achieved: '5',
+        },
+        activityType5: {
+          id: 'activityType5',
+          missed: '5',
+          achieved: '8',
+        },
+        activityType6: {
+          id: 'activityType6',
+          missed: '5',
+          achieved: '8',
+        },
+        activityType7: {
+          //prospect
+          id: 'activityType7',
+          missed: '5',
+          achieved: '4',
+        },
+      },
+    },
+    {
+      userId: '1234A',
+      date: dayjs().subtract(6, 'day'), //today's date
+      huddleSummary: {
+        huddleId: 'huddleBriefTitle',
+        huddleCollection: [
+          {
+            title: 'Huddle7',
+            desc: 'desc7',
+          },
+        ],
+      },
+      activitySummary: {
+        activityType1: {
+          id: 'activityType1',
+          missed: '5',
+          achieved: '6',
+        },
+        activityType2: {
+          id: 'activityType2',
+          missed: '4',
+          achieved: '6',
+        },
+        activityType3: {
+          id: 'activityType3',
+          missed: '1',
+          achieved: '6',
+        },
+        activityType4: {
+          id: 'activityType4',
+          missed: '5',
+          achieved: '8',
+        },
+        activityType5: {
+          id: 'activityType5',
+          missed: '5',
+          achieved: '6',
+        },
+        activityType6: {
+          id: 'activityType6',
+          missed: '5',
+          achieved: '6',
+        },
+        activityType7: {
+          //prospect
+          id: 'activityType7',
+          missed: '5',
+          achieved: '4',
+        },
       },
     },
   ];
@@ -283,11 +532,28 @@ export class AppService implements OnModuleInit {
     return this.data;
   }
 
-  async getDiarySummary(userInfoDto: UserInfoDto): Promise<any> {
+  async getDiarySummary(diarySummaryDTO: DiarySummaryDTO): Promise<any> {
     const filteredData = this.diarySummary.filter(
-      (item) => item.userId === userInfoDto.userId,
+      (item) => item.userId === diarySummaryDTO.userId,
     );
-    return filteredData;
+    function filterDataByDateRange(data, startDate, endDate) {
+      const startDateMod = startDate.toISOString().split('T')[0];
+      const endDateMod = endDate.toISOString().split('T')[0];
+      const filteredData = data.filter((item) => {
+        const itemDate = dayjs(item.date);
+        const itemDateMod = itemDate.toISOString().split('T')[0];
+        return itemDateMod >= startDateMod && itemDateMod <= endDateMod;
+      });
+      return filteredData;
+    }
+    const fromDate = dayjs().subtract(diarySummaryDTO.fromDate, 'day');
+    const toDate = dayjs(diarySummaryDTO.toDate);
+    const filteredDataDate = filterDataByDateRange(
+      filteredData,
+      fromDate,
+      toDate,
+    );
+    return filteredDataDate;
   }
 
   async modifyLead(leadDto: LeadDto): Promise<any> {
@@ -302,9 +568,8 @@ export class AppService implements OnModuleInit {
           result: 'Lead updated for the given data',
         },
       };
-    }
-    else {
-      return "lead created"
+    } else {
+      return 'lead created';
     }
   }
 
@@ -598,7 +863,7 @@ export class AppService implements OnModuleInit {
         id: 'Success',
         desc: 'Lead Created',
       },
-      data: "Lead create successfully",
+      data: 'Lead create successfully',
     };
   }
 }
